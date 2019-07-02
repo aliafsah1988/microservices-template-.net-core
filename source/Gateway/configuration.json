@@ -1,0 +1,103 @@
+﻿{
+  "ReRoutes": [
+    //A
+    {
+      "DownstreamPathTemplate": "/api/A/getAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60243
+        }
+      ],
+      "UpstreamPathTemplate": "/A/getAll",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/A/getById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60243
+        }
+      ],
+      "UpstreamPathTemplate": "/A/getById",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/A/create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60243
+        }
+      ],
+      "UpstreamPathTemplate": "/A/create",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/A/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60243
+        }
+      ],
+      "UpstreamPathTemplate": "/A/update",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/A/removeById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60243
+        }
+      ],
+      "UpstreamPathTemplate": "/A/removeById",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    //
+    //identify
+    {
+      "DownstreamPathTemplate": "/api/user/authenticate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54203
+        }
+      ],
+      "UpstreamPathTemplate": "/user/authenticate",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+    //
+  ],
+  "GlobalConfiguration": {
+    "UseServiceDiscovery": false
+  }
+}

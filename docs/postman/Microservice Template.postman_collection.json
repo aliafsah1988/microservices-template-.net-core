@@ -1,0 +1,272 @@
+{
+	"info": {
+		"name": "Microservice Template",
+		"_postman_id": "4e7f809f-8459-11aa-2a5c-760fc059a996",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ServiceA",
+			"description": "",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{a_server}}/A/getAll",
+							"host": [
+								"{{a_server}}"
+							],
+							"path": [
+								"A",
+								"getAll"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{a_server}}/A/getById?id=1",
+							"host": [
+								"{{a_server}}"
+							],
+							"path": [
+								"A",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"appId\": \"2F714D7E-1CD6-4E73-98A7-98F875D558F6\",\n  \"firstName\": \"ali\",\n  \"middleName\": \"1\",\n  \"lastName\": \"afsah\",\n  \"fullName\": \"ali afsah\",\n  \"email\": \"ali@afsah.com\",\n  \"phone\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{a_server}}/A/create",
+							"host": [
+								"{{a_server}}"
+							],
+							"path": [
+								"A",
+								"create"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n\t\"appId\": \"2f714d7e-1cd6-4e73-98a7-98f875d558f6\",\n\t\"firstName\": \"ali\",\n\t\"middleName\": \"aaaaaa\",\n\t\"lastName\": \"afsah\",\n\t\"fullName\": \"ali afsah\",\n\t\"email\": \"ali@afsah.com\",\n\t\"phone\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{a_server}}/A/update",
+							"host": [
+								"{{a_server}}"
+							],
+							"path": [
+								"A",
+								"update"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Remove By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{a_server}}/A/removeById?id=1",
+							"host": [
+								"{{a_server}}"
+							],
+							"path": [
+								"A",
+								"removeById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identify",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Username\": \"ali\",\n\t\"Password\": \"123\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/user/authenticate",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								"authenticate"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "80af36f0-6a65-4c6a-a2ce-6663e9207ff6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6c97f4cd-eb2e-4840-a271-5764f2b14a3b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fe878f65-b8ea-4419-9408-aeeebac0fbb4",
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWxpIEFmc2FoIiwiSWQiOiIxIiwibmJmIjoxNTYwOTM5MzIyLCJleHAiOjE1NjE1NDQxMjIsImlhdCI6MTU2MDkzOTMyMn0.Uf5ezcvW-ZMF31vdnk3heeiF6L7ftFjPo-Zyl9UX2Mk",
+			"type": "text"
+		},
+		{
+			"id": "57e8ae3b-a29f-42ae-956b-331b09deee84",
+			"key": "server",
+			"value": "http://localhost:54784",
+			"type": "text"
+		},
+		{
+			"id": "ee9714ba-2ce8-4bef-b57b-2b89601a6341",
+			"key": "a_server",
+			"value": "http://localhost:60243/api",
+			"type": "text"
+		}
+	]
+}
