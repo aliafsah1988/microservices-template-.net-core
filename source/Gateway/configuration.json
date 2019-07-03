@@ -1,8 +1,8 @@
 ﻿{
   "ReRoutes": [
-    //A
+    //some
     {
-      "DownstreamPathTemplate": "/api/A/getAll",
+      "DownstreamPathTemplate": "/api/some/getAll",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -10,7 +10,7 @@
           "Port": 60243
         }
       ],
-      "UpstreamPathTemplate": "/A/getAll",
+      "UpstreamPathTemplate": "/some/getAll",
       "UpstreamHttpMethod": [ "Get" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -18,7 +18,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/A/getById",
+      "DownstreamPathTemplate": "/api/some/getById",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -26,7 +26,7 @@
           "Port": 60243
         }
       ],
-      "UpstreamPathTemplate": "/A/getById",
+      "UpstreamPathTemplate": "/some/getById",
       "UpstreamHttpMethod": [ "Get" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/A/create",
+      "DownstreamPathTemplate": "/api/some/create",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -42,7 +42,7 @@
           "Port": 60243
         }
       ],
-      "UpstreamPathTemplate": "/A/create",
+      "UpstreamPathTemplate": "/some/create",
       "UpstreamHttpMethod": [ "Post" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -50,7 +50,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/A/update",
+      "DownstreamPathTemplate": "/api/some/update",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -58,7 +58,7 @@
           "Port": 60243
         }
       ],
-      "UpstreamPathTemplate": "/A/update",
+      "UpstreamPathTemplate": "/some/update",
       "UpstreamHttpMethod": [ "Post" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/A/removeById",
+      "DownstreamPathTemplate": "/api/some/removeById",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -74,7 +74,7 @@
           "Port": 60243
         }
       ],
-      "UpstreamPathTemplate": "/A/removeById",
+      "UpstreamPathTemplate": "/some/removeById",
       "UpstreamHttpMethod": [ "Post" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",

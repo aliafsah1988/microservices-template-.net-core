@@ -9,52 +9,48 @@ using ServiceA.Data.Entities;
 
 namespace ServiceA.Data.Repositories
 {
-    public class ARepository : IARepository
+    public class SomeRepository : ISomeRepository
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly DbSet<AEntity> _aEntity;
-        public ARepository(ApplicationDbContext dbContext)
+        private readonly DbSet<SomeEntity> _aEntity;
+        public SomeRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
-            _aEntity = _dbContext.Set<AEntity>();
+            _aEntity = _dbContext.Set<SomeEntity>();
         }
-        public Task<EntityEntry<AEntity>> Create(AEntity aEntity)
+        public Task<EntityEntry<SomeEntity>> Create(SomeEntity someEntity)
         {
-            var result = _aEntity.AddAsync(aEntity);
-            aEntity.CreatedDate = new DateTime();
-            //TODO aEntity.CreatedBy
+            var result = _aEntity.AddAsync(someEntity);
             _dbContext.SaveChanges();
             return result;
         }
 
-        public Task<bool> Update(AEntity aEntity)
+        public Task<bool> Update(SomeEntity someEntity)
         {
-            var existedA = _aEntity.FirstOrDefault(c => c.Id == aEntity.Id);
+            var existedA = _aEntity.FirstOrDefault(c => c.Id == someEntity.Id);
             if (existedA == null) return Task.FromResult(false);
-            existedA.AppId = aEntity.AppId;
-            existedA.Email = aEntity.Email;
-            existedA.FirstName = aEntity.FirstName;
-            existedA.FullName = aEntity.FullName;
-            existedA.LastName = aEntity.LastName;
-            existedA.MiddleName = aEntity.MiddleName;
-            existedA.Output = aEntity.Output;
-            existedA.UpdatedDate = new DateTime();
-            //TODO  existedA.UpdatedBy
+            existedA.AppId = someEntity.AppId;
+            existedA.Email = someEntity.Email;
+            existedA.FirstName = someEntity.FirstName;
+            existedA.FullName = someEntity.FullName;
+            existedA.LastName = someEntity.LastName;
+            existedA.MiddleName = someEntity.MiddleName;
+            existedA.Output = someEntity.Output;
             if (_dbContext.SaveChanges() > 0) return Task.FromResult(true);
             return Task.FromResult(false);
         }
 
-        public Task<List<AEntity>> GetAll()
+        public Task<List<SomeEntity>> GetAll()
         {
             return _aEntity.ToListAsync();
         }
 
-        public Task<List<AEntity>> GetByAppId(Guid appId)
+        public Task<List<SomeEntity>> GetByAppId(Guid appId)
         {
             return _aEntity.Where(c => c.AppId == appId).ToListAsync();
         }
 
-        public Task<AEntity> GetById(long id)
+        public Task<SomeEntity> GetById(long id)
         {
             return _aEntity.FirstOrDefaultAsync(a => a.Id == id);
         }

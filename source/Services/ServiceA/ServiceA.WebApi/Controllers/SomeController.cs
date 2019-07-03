@@ -7,17 +7,17 @@ using ServiceA.Data.Entities;
 
 namespace ServiceA.WebApi.Controllers
 {
-    [Route("api/A")]
+    [Route("api/Some")]
     [ApiController]
-    public class AController : ControllerBase
+    public class SomeController : ControllerBase
     {
-        private readonly IAService _aService;
+        private readonly ISomeService _someService;
         private readonly IIdentityService _identityService;
         private readonly IMapper _mapper;
 
-        public AController(IAService aService, IIdentityService identityService, IMapper mapper)
+        public SomeController(ISomeService someService, IIdentityService identityService, IMapper mapper)
         {
-            _aService = aService;
+            _someService = someService;
             _identityService = identityService;
             _mapper = mapper;
         }
@@ -27,7 +27,7 @@ namespace ServiceA.WebApi.Controllers
         {
             var identity = _identityService.GetIdentity();
             if (identity == null) return Unauthorized();
-            var aEntities = await _aService.GetAll();
+            var aEntities = await _someService.GetAll();
             return Ok(aEntities);
         }
 
@@ -36,29 +36,29 @@ namespace ServiceA.WebApi.Controllers
         {
             var identity = _identityService.GetIdentity();
             if (identity == null) return Unauthorized();
-            var aEntity = await _aService.GetById(id);
+            var aEntity = await _someService.GetById(id);
             return Ok(aEntity);
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody] Business.Domain.A a)
+        public async Task<IActionResult> Create([FromBody] Business.Domain.SomeModel someModel)
         {
             var identity = _identityService.GetIdentity();
             if (identity == null) return Unauthorized();
-            var aEntity = _mapper.Map<AEntity>(a);
+            var aEntity = _mapper.Map<SomeEntity>(someModel);
             aEntity.CreatedBy = identity.Id.ToString();
-            var result = await _aService.Create(aEntity);
+            var result = await _someService.Create(aEntity);
             return Created(string.Empty, result);
         }
 
         [HttpPost("update")]
-        public async Task<IActionResult> Update([FromBody] Business.Domain.A a)
+        public async Task<IActionResult> Update([FromBody] Business.Domain.SomeModel someModel)
         {
             var identity = _identityService.GetIdentity();
             if (identity == null) return Unauthorized();
-            var aEntity = _mapper.Map<AEntity>(a);
+            var aEntity = _mapper.Map<SomeEntity>(someModel);
             aEntity.UpdatedBy = identity.Id.ToString();
-            var result = await _aService.Update(aEntity);
+            var result = await _someService.Update(aEntity);
             return Ok(result);
         }
 
@@ -67,7 +67,7 @@ namespace ServiceA.WebApi.Controllers
         {
             var identity = _identityService.GetIdentity();
             if (identity == null) return Unauthorized();
-            var result = await _aService.RemoveById(id);
+            var result = await _someService.RemoveById(id);
             return Ok(result);
         }
     }

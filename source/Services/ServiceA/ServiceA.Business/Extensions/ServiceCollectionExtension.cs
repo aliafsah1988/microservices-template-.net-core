@@ -16,10 +16,10 @@ namespace ServiceA.Business.Extensions
         public static IServiceCollection AddABusiness(this IServiceCollection services, IConfiguration configuration)
         {
             // Service
-            services.AddScoped<IAService, AService>();
+            services.AddScoped<ISomeService, SomeService>();
 
             // Repository
-            services.AddScoped<IARepository, ARepository>();
+            services.AddScoped<ISomeRepository, SomeRepository>();
 
             // Mappers
             services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));

@@ -27,12 +27,12 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{a_server}}/A/getAll",
+							"raw": "{{a_server}}/some/getAll",
 							"host": [
 								"{{a_server}}"
 							],
 							"path": [
-								"A",
+								"some",
 								"getAll"
 							]
 						},
@@ -57,12 +57,12 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{a_server}}/A/getById?id=1",
+							"raw": "{{a_server}}/some/getById?id=1",
 							"host": [
 								"{{a_server}}"
 							],
 							"path": [
-								"A",
+								"some",
 								"getById"
 							],
 							"query": [
@@ -102,12 +102,12 @@
 							"raw": "{\n  \"appId\": \"2F714D7E-1CD6-4E73-98A7-98F875D558F6\",\n  \"firstName\": \"ali\",\n  \"middleName\": \"1\",\n  \"lastName\": \"afsah\",\n  \"fullName\": \"ali afsah\",\n  \"email\": \"ali@afsah.com\",\n  \"phone\": \"1234\"\n}"
 						},
 						"url": {
-							"raw": "{{a_server}}/A/create",
+							"raw": "{{a_server}}/some/create",
 							"host": [
 								"{{a_server}}"
 							],
 							"path": [
-								"A",
+								"some",
 								"create"
 							]
 						},
@@ -140,12 +140,12 @@
 							"raw": "{\n    \"id\": 2,\n\t\"appId\": \"2f714d7e-1cd6-4e73-98a7-98f875d558f6\",\n\t\"firstName\": \"ali\",\n\t\"middleName\": \"aaaaaa\",\n\t\"lastName\": \"afsah\",\n\t\"fullName\": \"ali afsah\",\n\t\"email\": \"ali@afsah.com\",\n\t\"phone\": \"1234\"\n}"
 						},
 						"url": {
-							"raw": "{{a_server}}/A/update",
+							"raw": "{{a_server}}/some/update",
 							"host": [
 								"{{a_server}}"
 							],
 							"path": [
-								"A",
+								"some",
 								"update"
 							]
 						},
@@ -170,12 +170,12 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{a_server}}/A/removeById?id=1",
+							"raw": "{{a_server}}/some/removeById?id=1",
 							"host": [
 								"{{a_server}}"
 							],
 							"path": [
-								"A",
+								"some",
 								"removeById"
 							],
 							"query": [
@@ -251,19 +251,19 @@
 	],
 	"variable": [
 		{
-			"id": "fe878f65-b8ea-4419-9408-aeeebac0fbb4",
+			"id": "938107ca-5c01-426b-926e-c84e2773cbcb",
 			"key": "token",
 			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWxpIEFmc2FoIiwiSWQiOiIxIiwibmJmIjoxNTYwOTM5MzIyLCJleHAiOjE1NjE1NDQxMjIsImlhdCI6MTU2MDkzOTMyMn0.Uf5ezcvW-ZMF31vdnk3heeiF6L7ftFjPo-Zyl9UX2Mk",
 			"type": "text"
 		},
 		{
-			"id": "57e8ae3b-a29f-42ae-956b-331b09deee84",
+			"id": "1b4bac00-6fe0-4844-85ad-d64243e28f0e",
 			"key": "server",
 			"value": "http://localhost:54784",
 			"type": "text"
 		},
 		{
-			"id": "ee9714ba-2ce8-4bef-b57b-2b89601a6341",
+			"id": "850263fa-05d8-4f44-87ec-7ed7b641f309",
 			"key": "a_server",
 			"value": "http://localhost:60243/api",
 			"type": "text"

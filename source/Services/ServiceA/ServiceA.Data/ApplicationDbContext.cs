@@ -12,8 +12,8 @@ namespace ServiceA.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            AEntityConfiguration
-                .Configure(modelBuilder.Entity<AEntity>());
+            SomeEntityConfiguration
+                .Configure(modelBuilder.Entity<SomeEntity>());
 
             base.OnModelCreating(modelBuilder);
         }

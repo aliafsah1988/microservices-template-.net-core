@@ -2,7 +2,7 @@
 
 namespace ServiceA.Business.Domain
 {
-    public class A
+    public class SomeModel
     {
         public long Id { get; set; }
         public Guid AppId { get; set; }

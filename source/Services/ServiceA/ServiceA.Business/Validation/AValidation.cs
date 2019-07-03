@@ -5,9 +5,9 @@ namespace ServiceA.Business.Validation
 {
     public static class AValidation
     {
-        public static async Task Validate(this Domain.A a)
+        public static async Task Validate(this Domain.SomeModel someModel)
         {
-            if (a.AppId == null)
+            if (someModel.AppId == null)
             {
                 throw new CustomeException();
             }

@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ServiceA.Data.Entities
 {
-    [Table("A", Schema = "dbo")]
-    public class AEntity
+    [Table("Some", Schema = "dbo")]
+    public class SomeEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

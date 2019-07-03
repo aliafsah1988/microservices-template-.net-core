@@ -30,7 +30,7 @@ namespace ServiceA.WebApi
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Service A", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Service SomeModel", Version = "v1" });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -54,7 +54,7 @@ namespace ServiceA.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Service A v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Service SomeModel v1");
             });
             app.UseMvc();
         }

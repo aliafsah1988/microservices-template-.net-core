@@ -7,7 +7,7 @@ namespace ServiceA.Business.Mappers
     {
         public MappingProfile()
         {
-            CreateMap<ServiceA.Business.Domain.A, AEntity>()
+            CreateMap<ServiceA.Business.Domain.SomeModel, SomeEntity>()
                 .ForMember(dest => dest.AppId, opt => opt.MapFrom(o => o.AppId))
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(o => o.Id))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(o => o.Email))
