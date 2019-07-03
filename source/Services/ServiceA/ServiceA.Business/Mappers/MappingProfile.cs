@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ServiceA.Business.Data.Entities;
+using ServiceA.Data.Entities;
 
 namespace ServiceA.Business.Mappers
 {

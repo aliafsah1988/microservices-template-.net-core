@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ServiceA.Business.Data.Entities;
+using ServiceA.Data.Entities;
 
-namespace ServiceA.Business.Data.EntityConfigurations
+namespace ServiceA.Data.EntityConfigurations
 {
     public class AEntityConfiguration
     {

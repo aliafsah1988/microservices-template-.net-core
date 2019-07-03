@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using ServiceA.Business.Data.Entities;
+using ServiceA.Data.Entities;
 
-namespace ServiceA.Business.Data.Interface
+namespace ServiceA.Data.Interface
 {
     public interface IARepository
     {

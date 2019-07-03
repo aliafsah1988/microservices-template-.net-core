@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ServiceA.Business.Data.Entities;
-using ServiceA.Business.Data.EntityConfigurations;
+using ServiceA.Data.EntityConfigurations;
+using ServiceA.Data.Entities;
 
-namespace ServiceA.Business.Data
+namespace ServiceA.Data
 {
     public class ApplicationDbContext : DbContext
     {

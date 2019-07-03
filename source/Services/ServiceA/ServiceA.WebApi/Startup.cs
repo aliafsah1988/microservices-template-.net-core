@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ServiceA.Business.Data;
+using ServiceA.Data;
 using ServiceA.Business.Extensions;
 using ServiceA.WebApi.Middlewares;
 using Swashbuckle.AspNetCore.Swagger;

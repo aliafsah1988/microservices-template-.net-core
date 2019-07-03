@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ServiceA.Business.Data.Entities
+namespace ServiceA.Data.Entities
 {
     [Table("A", Schema = "dbo")]
     public class AEntity

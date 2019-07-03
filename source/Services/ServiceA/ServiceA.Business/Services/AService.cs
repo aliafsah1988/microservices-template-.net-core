@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
-using ServiceA.Business.Data.Entities;
-using ServiceA.Business.Data.Interface;
 using ServiceA.Business.Services.Interface;
+using ServiceA.Data.Entities;
+using ServiceA.Data.Interface;
 
 namespace ServiceA.Business.Services
 {

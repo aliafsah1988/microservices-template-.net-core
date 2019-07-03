@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using ServiceA.Business.Data.Entities;
-using ServiceA.Business.Data.Interface;
+using ServiceA.Data.Interface;
+using ServiceA.Data.Entities;
 
-namespace ServiceA.Business.Data.Repositories
+namespace ServiceA.Data.Repositories
 {
     public class ARepository : IARepository
     {

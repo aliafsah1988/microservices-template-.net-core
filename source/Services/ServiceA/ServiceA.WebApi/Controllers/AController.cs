@@ -2,8 +2,8 @@
 using AutoMapper;
 using Identity.Business.Services;
 using Microsoft.AspNetCore.Mvc;
-using ServiceA.Business.Data.Entities;
 using ServiceA.Business.Services.Interface;
+using ServiceA.Data.Entities;
 
 namespace ServiceA.WebApi.Controllers
 {

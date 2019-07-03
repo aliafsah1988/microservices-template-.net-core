@@ -2,12 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ServiceA.Business.Data;
-using ServiceA.Business.Data.Interface;
-using ServiceA.Business.Data.Repositories;
+using ServiceA.Data;
 using ServiceA.Business.Mappers;
 using ServiceA.Business.Services;
 using ServiceA.Business.Services.Interface;
+using ServiceA.Data.Interface;
+using ServiceA.Data.Repositories;
 
 namespace ServiceA.Business.Extensions
 {
