@@ -19,8 +19,15 @@ The sample application is build based on the microservices architecture. There a
 - **Service A** - It's sample service with classic CRUD on sample entity.
 - **API Gateway** - Acts as a center point of entry to the back-end application, Provides data aggregation and communication path to microservices.
 
+![alt text](https://github.com/aliafsah1988/microservices-template-.net-core/blob/media/Structure.png)
+
 ## Security : JWT Token based Authentication
 JWT Token based authentication is implementated to secure the WebApi services. **Identity Microservice** acts as a Auth server and issues a valid token after validating the user credentitals. The API Gateway sends the token to the client. The client app uses the token for the subsequent request.
+
+![alt text](https://github.com/aliafsah1988/microservices-template-.net-core/blob/media/JWT%20Token%20based%20security.jpg)
+
+It's based on Distribution Session Store practice for microservices.
+![alt text](https://github.com/aliafsah1988/microservices-template-.net-core/blob/media/Distribution%20Session%20Store.png)
 
 ## Technologies
 - C#.NET
