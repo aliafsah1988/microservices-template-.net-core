@@ -16,7 +16,7 @@ This is a .Net Core sample application and an example of how to build and implem
 The sample application is build based on the microservices architecture. There are serveral advantages in building a application using Microservices architecture like Services can be developed, deployed and scaled independently.The below diagram shows the high level design of Back-end architecture.
 
 - **Identity Microservice** - Authenticates user based on username, password and issues a JWT Bearer token which contains Claims-based identity information in it.
-- **Service A** - It's sample service with classic CRUD on sample entity.
+- **Service A** - It's a sample service with classic CRUD on sample entity.
 - **API Gateway** - Acts as a center point of entry to the back-end application, Provides data aggregation and communication path to microservices.
 
 ![alt text](https://github.com/aliafsah1988/microservices-template-.net-core/blob/media/Structure.png)
